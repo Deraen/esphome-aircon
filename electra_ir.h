@@ -12,13 +12,16 @@ private:
   sensor::Sensor* temp_sensor{nullptr};
 
 public:
-  void set_temp_sensor(sensor::Sensor *sensor) {
-    this->temp_sensor = sensor;
+  ElectraAc(sensor::Sensor *_temp_sensor):
+    temp_sensor(_temp_sensor) {
   }
 
   void setMode(ClimateMode climateMode) {
     switch (climateMode)
     {
+    case CLIMATE_MODE_OFF:
+      ac.off();
+      break;
     case CLIMATE_MODE_HEAT:
       ac.setMode(kElectraAcHeat);
       ac.on();

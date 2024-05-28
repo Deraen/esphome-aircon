@@ -35,3 +35,5 @@ pip3 install esphome
 - Adapted from:
   - https://github.com/Hagakurje/ESPHome_Gree_AC
   - https://github.com/esphome/feature-requests/issues/444#issuecomment-765089230
+- Tasmota seems to have built-in support
+  - https://tasmota.github.io/docs/Commands/#ir-remote

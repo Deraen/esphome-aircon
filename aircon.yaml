@@ -41,8 +41,7 @@ sensor:
 climate:
   platform: custom
   lambda: |-
-    auto bedroom_ac = new ElectraAc();
-    bedroom_ac->set_temp_sensor(id(current_temperature));
+    auto bedroom_ac = new ElectraAc(id(current_temperature));
     App.register_component(bedroom_ac);
     return {bedroom_ac};
 
